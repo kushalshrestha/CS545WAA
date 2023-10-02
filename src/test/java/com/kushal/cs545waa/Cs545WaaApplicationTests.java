@@ -1,4 +1,4 @@
-package com.example.cs545waa;
+package com.kushal.cs545waa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
