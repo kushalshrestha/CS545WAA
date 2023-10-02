@@ -59,25 +59,6 @@ CS545WAA/
 
 ```
 
-- `src/main/java`: Contains the Java source code of this application.
-   - `com.example.cs545waa`: A package for your application's classes.
-     - `controller`: Controllers for handling HTTP requests and responses.
-     - `model`: Model classes for your data entities.
-     - `Cs545WaaApplication.java`: The main class with the `main` method to run the Spring Boot application.
-
-- `src/main/resources`: Contains application configuration files (e.g., `application.properties`) and static resources.
-
-- `src/http-requests` : Collection of RESTful web service HTTP Requests
-
-- `src/test`: Contains test source code and resources for unit and integration testing.
-
-- `target`: Contains compiled class files and build artifacts (generated when you build the project).
-
-- `.gitignore`: A file specifying which files and directories should be ignored by version control (Git in this case).
-
-- `pom.xml`: The project's Maven configuration file.
-
-
 ### Dependencies
 This project relies on following dependencies
 
