@@ -1,6 +1,6 @@
 # Spring Boot Project - CS545WAA
 
-This is a simple Spring Boot project that demonstrates the usage of the Lombok library to reduce boilerplate code. Lombok helps streamline your code by automatically generating getters, setters, constructors, and other common Java methods.
+This is a simple Spring Boot project for CS5454 - Web Application Architecture.
 
 ## Getting Started
 
@@ -22,6 +22,43 @@ Follow the instructions below to set up and run the project on your local machin
 4. Access the application in your web browser.
 
 ### Project Structure
+
+```agsl
+CS545WAA/
+|
+|-- src/
+|   |-- http-requests/
+|   |   |- books/
+|   |   
+|   |-- main/
+|   |   ├-- java/
+|   |   |   ├-- com/
+|   |   |   |    |-- kushal.cs545waa/
+|   |   |   |       ├-- controller/           # RESTful API controllers
+|   |   |   |       ├-- model/               # Entity classes
+|   |   |   |       └-- Cs545WaaApplication.java       # Main Spring Boot application class
+|   |   |   |
+|   |   ├-- resources/
+|   |   |   ├-- static/                        
+|   |   |   ├-- templates/                     
+|   |   |   ├-- application.properties         # Application configuration
+|   |   |
+|   ├-- test/
+|       |-- java/
+|           └-- com/
+|               └-- kushal.cs545waa/
+|                   ├-- controllers/           # Test classes for controllers
+|                   └-- Cs545WaaApplicationTests.java  # Main application test class
+|
+├-- .gitignore                                # Git ignore file
+├-- mvnw                                      # Maven wrapper script (for Unix-based systems)
+├-- mvnw.cmd                                  # Maven wrapper script (for Windows)
+├-- pom.xml                                   # Maven project configuration
+└-- README.md                                 # Project documentation
+
+
+```
+
 - `src/main/java`: Contains the Java source code of this application.
    - `com.example.cs545waa`: A package for your application's classes.
      - `controller`: Controllers for handling HTTP requests and responses.
