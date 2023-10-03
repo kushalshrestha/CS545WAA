@@ -5,10 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 @Builder
-public class Book {
+@AllArgsConstructor
+public class Product {
     private int id;
     private String title;
-    private String isbn;
+    private String description;
+    private double price;
 }
