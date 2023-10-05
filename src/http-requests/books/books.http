@@ -49,24 +49,13 @@ Content-Type: application/json
 }
 
 ###
-# PUT - Update a Book
-###
-PUT http://localhost:8080/api/v1/books/1?version=2
-Content-Type: application/json
-
-{
-  "title" : "Updated Book123",
-  "isbn" : "978-9062315803"
-}
-
-###
 # PUT - Update a Book using version 2
 ###
 PUT http://localhost:8080/api/v1/books/1?version=2
 Content-Type: application/json
 
 {
-  "title" : "Updated Book1234",
+  "title" : "Updated Book123",
   "isbn" : "978-9062315803"
 }
 
