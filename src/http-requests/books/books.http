@@ -1,0 +1,79 @@
+
+#####
+# GET - Collection of Book
+###
+GET http://localhost:8080/api/v1/books
+Accept: application/cs.miu.edu-v1+json
+
+#####
+# GET - Collection of Book
+###
+GET http://localhost:8080/api/v1/books
+Accept: application/cs.miu.edu-v2+json
+
+###
+# POST - Add a Book
+###
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+X-API-VERSION: 1
+
+{
+  "id" : 6,
+  "title" : "A New Book",
+  "isbn" : "978-0062315003"
+}
+
+###
+# POST - Add a Book
+###
+POST http://localhost:8080/api/v1/books
+Content-Type: application/json
+X-API-VERSION: 2
+
+{
+  "id" : 5,
+  "title" : "A New Book",
+  "isbn" : "978-0062315003"
+}
+
+###
+# PUT - Update a Book
+###
+PUT http://localhost:8080/api/v1/books/1?version=1
+Content-Type: application/json
+
+{
+  "title" : "Updated Book",
+  "isbn" : "978-0062315803"
+}
+
+###
+# PUT - Update a Book
+###
+PUT http://localhost:8080/api/v1/books/1?version=2
+Content-Type: application/json
+
+{
+  "title" : "Updated Book123",
+  "isbn" : "978-9062315803"
+}
+
+###
+# PUT - Update a Book using version 2
+###
+PUT http://localhost:8080/api/v1/books/1?version=2
+Content-Type: application/json
+
+{
+  "title" : "Updated Book1234",
+  "isbn" : "978-9062315803"
+}
+
+###
+# DELETE - Delete a Book
+###
+DELETE http://localhost:8080/api/v1/books/1
+
+
+
