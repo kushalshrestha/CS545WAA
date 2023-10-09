@@ -4,21 +4,17 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Data
 @RequiredArgsConstructor
-public class Department {
-
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private String reservationDetails;
 
-    @OneToMany(mappedBy = "department")
-    private List<Employee> employees;
-
-
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 }

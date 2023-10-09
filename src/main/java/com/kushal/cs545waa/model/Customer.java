@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Data
 @RequiredArgsConstructor
-public class Department {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +17,8 @@ public class Department {
 
     private String name;
 
-    @OneToMany(mappedBy = "department")
-    private List<Employee> employees;
-
+    @OneToMany
+    @JoinColumn(name = "customer_id")
+    private List<Reservation> reservations;
 
 }

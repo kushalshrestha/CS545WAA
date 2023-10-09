@@ -1,16 +1,20 @@
 package com.kushal.cs545waa.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
+@Entity
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@RequiredArgsConstructor
 public class Book {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String title;
-    private String isbn;
+
+    @ManyToOne
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
 }

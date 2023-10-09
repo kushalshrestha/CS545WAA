@@ -4,21 +4,19 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
 @RequiredArgsConstructor
-public class Department {
-
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
-    @OneToMany(mappedBy = "department")
-    private List<Employee> employees;
-
+    @ManyToMany(mappedBy = "courses")
+    private Set<Student> students;
 
 }
