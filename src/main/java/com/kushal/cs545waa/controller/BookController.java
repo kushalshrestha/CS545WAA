@@ -1,6 +1,10 @@
 package com.kushal.cs545waa.controller;
 
-import com.kushal.cs545waa.model.Book;
+//import com.kushal.cs545waa.model.Book;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -103,4 +107,15 @@ public class BookController {
                 .findFirst()
                 .ifPresent(bookList::remove);
     }
+}
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+class Book {
+    private int id;
+    private String title;
+    private String isbn;
 }
