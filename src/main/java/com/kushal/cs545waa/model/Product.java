@@ -1,12 +1,14 @@
-package com.kushal.cs545waa.model.manytoone.uni_withJoinColumn;
+package com.kushal.cs545waa.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Data;
 
 @Entity
-public class PersonA {
+@Data
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,4 +16,5 @@ public class PersonA {
 
     private String name;
 
+    private String description;
 }
