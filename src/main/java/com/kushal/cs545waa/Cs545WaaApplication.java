@@ -1,9 +1,6 @@
 package com.kushal.cs545waa;
 
-import com.kushal.cs545waa.model.Customer;
-import com.kushal.cs545waa.model.Order;
-import com.kushal.cs545waa.model.OrderLine;
-import com.kushal.cs545waa.model.Product;
+import com.kushal.cs545waa.model.*;
 import com.kushal.cs545waa.repository.CustomerRepository;
 import com.kushal.cs545waa.repository.OrderLineRepository;
 import com.kushal.cs545waa.repository.OrderRepository;
@@ -43,16 +40,24 @@ public class Cs545WaaApplication {
     public CommandLineRunner demo() {
         return (args) -> {
 
-            Product product = new Product();
-            product.setName("Product A");
-            product.setDescription("Description for Product A");
+            CD product = new CD();
+            product.setName("CD 1");
+            product.setDescription("Description for CD 1");
+            product.setArtist("The Eagles");
 
-            Product product1 = new Product();
-            product1.setName("Product B");
-            product1.setDescription("Description for Product B");
+            DVD product1 = new DVD();
+            product1.setName("DVD 1");
+            product1.setDescription("Description for DVD 1");
+            product1.setGenre("Blues");
+
+            Book product2 = new Book();
+            product2.setName("Book 1");
+            product2.setDescription("Description for Book 1");
+            product2.setTitle("Book Title 1");
 
             productRepository.save(product);
             productRepository.save(product1);
+            productRepository.save(product2);
 
             OrderLine orderLine = new OrderLine();
             orderLine.setQuantity(5);
@@ -66,7 +71,7 @@ public class Cs545WaaApplication {
 
             OrderLine orderLine3 = new OrderLine();
             orderLine3.setQuantity(15);
-            orderLine3.setProduct(product);
+            orderLine3.setProduct(product2);
             orderLineRepository.save(orderLine3);
 
 
